@@ -162,7 +162,7 @@ class JobBoard extends Component {
 			<Dialog
 				open={ pauseDialogOpen }
 				onRequestClose={ ::this.pauseDialogClose }
-				title="Create Job"
+				title="Lock Queue"
 				actions={ actions }
 				modal={ false }>
 				Are you sure you want to lock the Job queue?
