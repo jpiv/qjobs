@@ -1,0 +1,59 @@
+$col-width: 15%;
+.JobBoard {
+	.jobContainer {
+		width: 100%;
+		margin-top: 20px;
+		.job {
+			position: relative;
+			width: 100%;
+			margin-top: 12px;
+		}		
+		.jobCol {
+			display: inline-block;
+			font-size: 16px;
+			width: $col-width;
+			&.header {
+				margin-top: 0px;
+				color: #999999;
+				font-size: 20px;
+			}
+			.cancel {
+				background-color: red;
+				color: white;
+				padding: 4px 8px;
+				border: none;
+				&:hover {
+					cursor: pointer;
+					background-color: #BB0000;
+				}
+			}
+		}
+	}
+	.createJob {
+		background-color: #EB943C;
+		border: none;
+		color: white;
+		padding: 12px 24px;
+		font-size: 12px;
+		margin-right: 24px;
+		&:hover {
+			cursor: pointer;
+			background-color: #CD761E;
+		}
+		&:disabled {
+			cursor: default;
+			background-color: gray;
+		}
+	}
+	.pause {
+		background-color: #3A7EEE;
+		border: none;
+		color: white;
+		padding: 12px 24px;
+		font-size: 12px;
+		&:hover {
+			cursor: pointer;
+			background-color: #266ada;
+		}
+	}
+}

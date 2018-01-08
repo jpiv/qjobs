@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Router, Route, IndexRedirect } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import createBrowserHistory from 'history/createBrowserHistory';
-
-const browserHistory = createBrowserHistory();
+import App from './app.jsx';
+import JobBoard from 'views/JobBoard';
 
 export default class AppRouter extends Component {
 	render() {
 		return (
 			<Router history={ browserHistory }>
 				<Route path="/" component={ App }>
-					<IndexRedirect />
+					<IndexRoute component={ JobBoard } />
 				</Route>
 			</Router>
 		);
