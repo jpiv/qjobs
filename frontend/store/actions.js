@@ -39,7 +39,7 @@ export function requestCancelJob(sequenceId) {
 export function fetchJobs() {
 	return dispatch => {
 		dispatch(requestJobs);
-		return fetch('http://localhost:5000/jobs')
+		return fetch('http://ec2-52-91-107-215.compute-1.amazonaws.com:5000/jobs')
 			.then(resp => resp.json())
 			.then(jobs => dispatch(receiveJobs(jobs)));
 	};
@@ -48,7 +48,7 @@ export function fetchJobs() {
 export function postJob(title) {
 	return dispatch => {
 		dispatch(requestCreateJob());
-		return fetch('http://localhost:5000/jobs', {
+		return fetch('http://ec2-52-91-107-215.compute-1.amazonaws.com:5000/jobs', {
 			method: 'POST',
 			body: JSON.stringify({ title })
 		})
@@ -60,7 +60,7 @@ export function postJob(title) {
 export function cancelJob(sequenceId) {
 	return dispatch => {
 		dispatch(requestCancelJob());
-		return fetch('http://localhost:5000/jobs', {
+		return fetch('http://ec2-52-91-107-215.compute-1.amazonaws.com:5000/jobs', {
 			method: 'DELETE',
 			body: JSON.stringify({ sequenceId })
 		})
