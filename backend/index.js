@@ -6,7 +6,7 @@ const mountRoutes = require('./routes/index.js');
 
 const PORT = 5000;
 const server = Hapi.server({
-	host: 'ec2-52-91-107-215.compute-1.amazonaws.com',
+	host: '0.0.0.0',
 	port: PORT,
 	routes: {
 		files: {
