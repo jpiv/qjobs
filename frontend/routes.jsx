@@ -8,7 +8,7 @@ export default class AppRouter extends Component {
 	render() {
 		return (
 			<Router history={ browserHistory }>
-				<Route path="/" component={ App }>
+				<Route path="/*" component={ App }>
 					<IndexRoute component={ JobBoard } />
 				</Route>
 			</Router>

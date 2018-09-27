@@ -52565,7 +52565,7 @@ var AppRouter = function (_Component) {
 				{ history: _reactRouter.browserHistory },
 				_react2.default.createElement(
 					_reactRouter.Route,
-					{ path: '/', component: _app2.default },
+					{ path: '/*', component: _app2.default },
 					_react2.default.createElement(_reactRouter.IndexRoute, { component: _JobBoard2.default })
 				)
 			);
@@ -64181,7 +64181,7 @@ var JobBoard = function (_Component) {
 				{
 					open: pauseDialogOpen,
 					onRequestClose: this.pauseDialogClose.bind(this),
-					title: 'Create Job',
+					title: 'Lock Queue',
 					actions: actions,
 					modal: false },
 				'Are you sure you want to lock the Job queue?'
